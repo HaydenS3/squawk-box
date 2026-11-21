@@ -4,7 +4,7 @@ A platform dedicated to detecting, aggregating, and classifying my pet cockatiel
 
 ## Setup
 
-https://wiki.seeedstudio.com/respeaker_2_mics_pi_hat_raspberry_v2/
+https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT_Raspberry/
 
 ### Mixer configuration
 
