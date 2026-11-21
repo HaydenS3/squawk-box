@@ -101,6 +101,10 @@ Python script running on a Raspberry Pi with a ReSpeaker 2-Mics Pi HAT. The scri
 
 Visualization and analysis of the data will be done on a server. The server will receive the data from the Raspberry Pi, store it in a database, and provide a web interface for visualization and analysis.
 
+**Data Analysis**
+
+Classification of the vocalizations will be done using machine learning techniques. The data will be labeled in Raven Lite and used to train a model to classify the vocalizations. 
+
 ## Todo
 
 - [ ] Sample and label a dataset of cockatiel vocalizations.
