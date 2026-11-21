@@ -1,3 +1,6 @@
 [submodule "seeed-voicecard"]
 	path = seeed-voicecard
 	url = https://github.com/respeaker/seeed-voicecard.git
+[submodule "mic_hat"]
+	path = mic_hat
+	url = https://github.com/respeaker/mic_hat.git

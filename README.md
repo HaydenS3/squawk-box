@@ -15,7 +15,7 @@ https://wiki.seeedstudio.com/respeaker_2_mics_pi_hat_raspberry_v2/
 2. Data Analysis
   a. Basic classification to begin. Identify screams/screeches from other vocalizations. Basic frequency analysis to identify patterns in vocalizations.
   b. Advanced classification to identify specific vocalizations and their meanings.
-3. Data Visualiztion
+3. Data Visualization
   a. Visualize data on a web accessible dashboard.
 
 ### Implementation
