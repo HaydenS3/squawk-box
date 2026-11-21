@@ -1,3 +1,6 @@
 [submodule "mic_hat"]
 	path = mic_hat
 	url = https://github.com/respeaker/mic_hat.git
+[submodule "seeed-linux-dtoverlays"]
+	path = seeed-linux-dtoverlays
+	url = https://github.com/Seeed-Studio/seeed-linux-dtoverlays.git
