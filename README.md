@@ -100,3 +100,14 @@ Python script running on a Raspberry Pi with a ReSpeaker 2-Mics Pi HAT. The scri
 **Server**
 
 Visualization and analysis of the data will be done on a server. The server will receive the data from the Raspberry Pi, store it in a database, and provide a web interface for visualization and analysis.
+
+## Todo
+
+- [ ] Sample and label a dataset of cockatiel vocalizations.
+
+## Journal
+
+### 2026-11-20
+
+- Got the ReSpeaker 2-Mics Pi HAT working with a Raspberry Pi 4B. The HAT is recognized as card 3 in `arecord -l`. The default settings produce near-silent recordings, so I had to configure the mixer in `alsamixer` to enable the input path and set appropriate gain levels. Recorded a test clip at 48 kHz, which captures me whistling.
+- Loaded the whistle clip into Raven Lite and generated a spectrogram. Took my first stab at labeling the clip, but this is fake data.
