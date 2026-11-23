@@ -107,7 +107,9 @@ Classification of the vocalizations will be done using machine learning techniqu
 
 ## Todo
 
+- [ ] Get data pipeline working so that others can help label and classify
 - [ ] Sample and label a dataset of cockatiel vocalizations.
+- [ ] Solution for moving the mic around my apartment? Can't keep plugged into one outlet all the time
 
 ## Journal
 
