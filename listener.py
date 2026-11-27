@@ -3,6 +3,7 @@
 
 import pyaudio
 import wave
+from datetime import datetime
 
 RESPEAKER_RATE = 16000
 RESPEAKER_CHANNELS = 2
@@ -11,7 +12,9 @@ RESPEAKER_WIDTH = 2
 RESPEAKER_INDEX = 1  # refer to input device id
 CHUNK = 1024
 RECORD_SECONDS = 5
-WAVE_OUTPUT_FILENAME = "output.wav"
+
+SQUAWK_FREQUENCY_RANGE = (1000, 3000)  # Hz
+DB_THRESHOLD = -30  # dB
 
 class Listener:
     p = pyaudio.PyAudio()
@@ -37,7 +40,8 @@ class Listener:
             frames.append(data)
         return frames
 
-    def write_wav(self, frames, filename=WAVE_OUTPUT_FILENAME):
+    def write_wav(self, frames):
+        filename = "recording-" + datetime.now().strftime("%Y%m%d-%H%M%S") + ".wav"
         with wave.open(filename, 'wb') as wf:
             wf.setnchannels(RESPEAKER_CHANNELS)
             wf.setsampwidth(self.p.get_sample_size(self.p.get_format_from_width(RESPEAKER_WIDTH)))
@@ -48,7 +52,7 @@ class Listener:
     def detect_squawk(self, frames):
         # Placeholder for squawk detection logic
         # This function should analyze the frames and return True if a squawk is detected
-        # Simple detection logic will look for audio to surpass a dB threshold within the squawk frequency range
+        # Simple detection logic will look for audio to surpass a dB threshold within the squawk frequency range (FFT)
         return False
 
     def listen(self):
