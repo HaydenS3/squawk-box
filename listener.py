@@ -40,7 +40,7 @@ class Listener:
     def write_wav(self, frames, filename=WAVE_OUTPUT_FILENAME):
         with wave.open(filename, 'wb') as wf:
             wf.setnchannels(RESPEAKER_CHANNELS)
-            wf.setsampwidth(p.get_sample_size(p.get_format_from_width(RESPEAKER_WIDTH)))
+            wf.setsampwidth(self.p.get_sample_size(self.p.get_format_from_width(RESPEAKER_WIDTH)))
             wf.setframerate(RESPEAKER_RATE)
             wf.writeframes(b''.join(frames))
             wf.close()
@@ -48,6 +48,7 @@ class Listener:
     def detect_squawk(self, frames):
         # Placeholder for squawk detection logic
         # This function should analyze the frames and return True if a squawk is detected
+        # Simple detection logic will look for audio to surpass a dB threshold within the squawk frequency range
         return False
 
     def listen(self):
