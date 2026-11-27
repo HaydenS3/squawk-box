@@ -49,3 +49,11 @@ class Listener:
         # Placeholder for squawk detection logic
         # This function should analyze the frames and return True if a squawk is detected
         return False
+
+    def listen(self):
+        print("Listening for squawks...")
+        while True:
+            frames = self.get_next_frames(1)
+            if self.detect_squawk(frames):
+                print("Squawk detected!")
+                self.write_wav(frames)
