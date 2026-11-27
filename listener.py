@@ -44,3 +44,8 @@ class Listener:
             wf.setframerate(RESPEAKER_RATE)
             wf.writeframes(b''.join(frames))
             wf.close()
+
+    def detect_squawk(self, frames):
+        # Placeholder for squawk detection logic
+        # This function should analyze the frames and return True if a squawk is detected
+        return False
